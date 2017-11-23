@@ -1,0 +1,310 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+        >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    
+        
+        <title>CARP </title>
+        
+        
+        
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="css/mi13.css" />
+        
+        
+	
+        
+        
+        
+        
+
+</head> 
+<body> 
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>CARP</h1>
+	</div>        
+    
+	<div data-role="content">	    
+    
+              
+     		<div class="clear"></div>
+       		<div class="contenedor1">
+                <div class="col1" style="padding-top:18px">
+                		<img src="img/parachute.png" width="50" height="50" alt="paraca">
+                </div>
+               
+                             <div class="celula ui-body-b cel1" >
+                                    <label class="label">DROP TYPE</label>
+                                     <select id="dbTipoLzm">
+                                            <option value="4">CDS</option>
+                                            <option value="2.7">A35</option>
+                                            <option value="3">PDS</option>
+                                            <option value="1">AUTO</option>	
+                                        </select>
+                            </div>
+                            
+                             <div class="celula ui-body-b cel2" >
+                                   <label>PARACHUTE TYPE</label>
+                                        <select id="dbTipoParaca" onchange="borraCampos()">
+                                            <option value="G11A">G11A</option>
+                                            <option value="G11B">G11B</option>
+                                            <option value="G12D">G12D</option>
+                                            <option value="G12E">G12E</option>
+                                            <option value="G13">G13</option>
+                                            <option value="G14">G14</option>
+                                             <option value="RS 22">RS 22</option>
+                                              <option value="RS 26">RS 26</option>
+                                            <option value="AUTO A">AUTO A</option>
+                                            <option value="AUTO B">AUTO B</option>
+                                            <option value="AUTO C">AUTO C</option>
+                                        </select>
+                            </div>
+              
+                
+                
+                 
+               <div class="linea">
+                
+                        <div class="celula ui-body-b cel1">
+                               <label class="label">WEIGHT</label>                  
+                                <div style="padding-left:20%">
+                                <input name="txtPeso" id="txtPeso" type="tel" value="2500"  maxlength="4" style="width:50px;height:15px;text-align:right" >
+                               </div>
+                        </div>                
+                        
+                         <div class="celula ui-body-b cel2" style="font-size:inherit">
+                                 <select name="slider" id="isLbs" data-role="slider">
+                                        <option value="1">Lbs</option>
+                                        <option value="2.2">Kg</option>
+                                  </select>
+                        </div>
+                </div><!-- /linea 2 -->
+                
+                 
+        	</div>  <!-- /contenedor 1 -->
+            
+           
+            <div class="clear"></div>
+            
+            <div class="contenedor1">
+                <div class="col1" style="padding-top:5px">
+                 <img src="img/plane.png" width="45" height="36" alt="plane"></div>
+                
+              <div class="celula ui-body-b cel1">
+                               <label class="label">GS kts</label>                  
+                                <div style="padding-left:20%">
+                                <input id="txtGS" type="tel" value="125"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+               </div>  
+                
+                 <div class="celula ui-body-b cel1">
+                               <label class="label">HEIGHT ft</label>                  
+                                <div style="padding-left:20%">
+                                <input id="txtHeight" type="tel" value="900"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+                 </div>  
+        	</div>  <!-- /contenedor 1 -->
+            
+             <div class="clear"></div>
+            
+            <div class="contenedor1">
+                <div class="col1" style="padding-top:5px">
+                 <img src="img/meteo.png" width="45" height="30" alt="meteo"></div>
+                
+              <div class="celula ui-body-b cel1">
+                               <label class="label">WIND from º</label>                  
+                                <div style="padding-left:20%">
+                                <input name="RbViento" id="RbViento" type="tel" value="020"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+               </div>  
+                
+                 <div class="celula ui-body-b cel1">
+                               <label class="label">INTENSITY kts</label>                  
+                                <div style="padding-left:20%">
+                                <input name="intensidad" id="intensidad" type="tel" value="5"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+                 </div>  
+        	</div>  <!-- /contenedor 1 -->
+            
+            
+            
+             <div class="clear"></div>
+            
+            <div class="contenedor1">
+                <div class="col1" style=" padding-top:10px; height:60px">
+                 		<img src="img/dz.png" width="45" height="40" alt="dz">
+                       
+                 </div>
+                
+              <div class="celula ui-body-b cel1">
+                               <label class="label">DZ axis º</label>                  
+                                <div style="padding-left:20%">
+                                <input id="txtDzAxis" type="tel" value="010"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+               </div>  
+                
+                 <div class="celula ui-body-b cel1">
+                               <label class="label">MARKER distance mts</label>                  
+                                <div style="padding-left:20%">
+                                <input name="txtD" id="txtD" type="tel" value="300"  maxlength="4" style="width:50px;height:15px;text-align:right">
+                               </div>
+                 </div>  
+                 
+                 
+                 
+                     <div class="linea">
+                
+                        <div class="celula cel1" >
+                             <div style="font-family:Arial, Helvetica, sans-serif,; padding-top:10PX"></div>
+                             <div style=" font-family:Arial, Helvetica, sans-serif"></div>
+                        </div>                
+                        
+                         <div class="celula ui-body-b cel2" style="font-size:inherit" >
+                                 <select name="slider" id="blnIzq" data-role="slider">
+                                        <option value="-1">left</option>
+                                        <option value="1">right</option>
+                                  </select>
+                        </div>
+                </div><!-- /linea 2 -->
+        	</div>  <!-- /contenedor 1 -->
+            
+                      
+	</div> <!-- /content -->
+    
+       
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+            <div data-role="navbar" id="navbar">
+                <ul>
+                     <li><a href="#page1" data-icon="grid" data-transition="none" class="ui-btn-active ui-state-persist">Settings</a></li>
+                    <li><a href="#page2" data-icon="check"  data-transition="none" >Data</a></li>
+                    <li><a href="#page3" data-icon="star" data-transition="none">Map</a></li>
+                    
+                </ul>
+            </div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page1 -->
+
+<!-- /page2 ------------------------------------------------------------------------>
+
+<div data-role="page" id="page2">    
+    
+	<div data-role="content">	     
+         
+      <div id="div_canvas" style="background-color:#FFF; border: 1px solid grey; height:290px; width: 290px; float:left">
+      <canvas id="c"></canvas>
+        </div>
+      <div class="clear"></div>
+      
+      <div class="linea_data_top">
+      		<div class="celula_data_top">
+            		<div style="text-shadow:none" >TTF</div> 
+                    <div id="ttf" style="background-color:white"> 0</div>            
+            </div>  
+            <div class="celula_data_top">
+            		<div style="text-shadow:none" >FTD</div> 
+                    <div id="ftd" style="background-color:white" >error</div> 
+            </div>      
+      </div>
+      
+       <div class="clear"></div>
+       
+         
+       <div class="data_down">
+           	<div class="linea_data_down">
+               	<div class="celula_down_comun etiqueta_down">ET</div>
+               	<div id="et" class="celula_down_comun">0</div>
+                <div class="celula_down_comun etiqueta_down">DQ</div>
+               	<div id="dq" class="celula_down_comun">0</div>
+                <div class="celula_down_comun etiqueta_down">VD</div>
+               	<div id="vd" class="celula_down_comun">0</div>
+              
+                <div class="celula_down_comun etiqueta_down">RF</div>
+               	<div id="rf" class="celula_down_comun">0</div>
+                <div class="celula_down_comun etiqueta_down">TFC</div>
+               	<div id="tfc" class="celula_down_comun">0</div>
+       		</div>
+       </div> <!--  /data_down -->  
+        	
+  </div>  <!-- /ccontent -->             
+         
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-icon="grid" data-transition="none">Settings</a></li>
+                    <li><a href="#page2" data-icon="check" class="ui-btn-active ui-state-persist" >Data</a></li>
+                    <li><a href="#page3" data-icon="star"  data-transition="none">Map</a></li>
+                    
+                </ul>
+            </div><!-- /navbar -->
+	</div><!-- /footer -->
+ 
+</div> <!-- /page2 -->
+
+
+<!-- /page3 ----------------------------------------------------------->
+
+<div data-role="page" id="page3">    
+    	
+    <div id="mi_content_map">
+    	<div id="header_map">         
+            <input style=" font-size:10px; width:50px; float:left" id ="txtLat" name="txtLat" type="text" > 
+			<input id="txtLon"  name="txtLon" type="text" style=" font-size:10px; width:50px; float:left" >
+            &nbsp;Lat/Lon DZ IP  
+            <div id="btn_Map">            
+             <input data-role="none" type="button" onClick="iniMap()" value="Update">
+            </div>           
+        <div> <!-- header map -->  
+        
+   			 <div class="clear"></div>
+       
+			<div id="mapContainer" style="background:#669; margin-top:4px;"></div>        
+    </div>    <!-- mi content map --> 
+    
+          
+        
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-icon="grid" data-transition="none">Settings</a></li>
+                    <li><a href="#page2" data-icon="check" data-transition="none" >Data</a></li>
+                    <li><a href="#page3" data-icon="star" class="ui-btn-active ui-state-persist">Map</a></li>
+                      
+                </ul>
+            </div><!-- /navbar -->
+	</div><!-- /footer -->
+ 
+</div> <!-- /page3 -->
+
+
+<!-- /page4 ----------------------------------------------------------->
+
+
+
+<!-- /page4 ----------------------------------------------------------->
+
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+        <script type="text/javascript" src="all.min.js"></script>  <!--  /fabric canvas -->
+        <script type="text/javascript" src="Delicious.font.js"></script>
+        <script type="text/javascript" src="todo15.js"></script>
+        <script type="text/javascript" src="parachutes.js"></script>         
+       	<script type="text/javascript" src="coordenadas16.js" ></script> 
+<script type="text/javascript" >
+			
+			inicializa();	  // pinta el fondo		
+			 $('#page2' ).live( 'pageshow',function(){return calcFooter()});
+            $('#page3' ).live( 'pageshow',function(){return carga3()});
+
+</script>
+</body>
+
+</html>
